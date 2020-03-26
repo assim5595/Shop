@@ -6,7 +6,7 @@
 	{
 		public int Id { get; set; }
 		
-		[MaxLength (50)]
+		[MaxLength (50, ErrorMessage = "El nombre no debe rebasarl os 50 Caracteres" )]
 		[Required]
 		public string Name { get; set; }
 
