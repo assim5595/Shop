@@ -2,7 +2,7 @@
 {
    
     using Shop.Web.Data.Entities;
-using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore;
 
     public class DataContext : DbContext
     {

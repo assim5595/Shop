@@ -26,6 +26,9 @@ namespace Shop.Web
                 cfg.UseSqlServer(Configuration.GetConnectionString("MiConexion"));
             });
 
+            services.AddTransient<SeedDb>();
+            services.AddScoped<IRepository, Repository>();
+
             services.AddControllersWithViews();
         }
 
