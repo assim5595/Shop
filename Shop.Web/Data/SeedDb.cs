@@ -9,7 +9,7 @@ public class SeedDb
 {
     private readonly DataContext context;
     private readonly UserManager<User> userManager;
-    private Random random;
+    private readonly Random random;
 
 
     public SeedDb(DataContext context, UserManager<User> userManager)
