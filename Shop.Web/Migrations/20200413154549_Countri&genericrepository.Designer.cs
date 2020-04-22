@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Shop.Web.Data;
 
 namespace Shop.Web.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200413154549_Countri&genericrepository")]
+    partial class Countrigenericrepository
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -178,10 +180,10 @@ namespace Shop.Web.Migrations
                     b.Property<bool>("IsAvailabe")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("LastPurchase")
+                    b.Property<DateTime?>("LastPurchase")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("LastSale")
+                    b.Property<DateTime?>("LastSale")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
